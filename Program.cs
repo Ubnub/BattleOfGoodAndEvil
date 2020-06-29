@@ -6,32 +6,27 @@ using System.Threading.Tasks;
 
 namespace _20200629_Superpowers
 {
-    interface IHero
+
+    class Supementas : IHero
     {
-        string HeroName { get; set; }
+        public string HeroName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int HeroRank { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-        int HeroRank { get; set; }
+        public void PrintWhoWins()
+        {
+            Console.WriteLine("me");
+        }
 
-        bool WillHeroWin(int enemyRank, string enemyName);
-
-        void PrintWhoWins();
+        public bool WillHeroWin(int enemyRank, string enemyName)
+        {
+            return true;
+        }
     }
 
-    interface IVilain
+
+    class Herojus : IHero
     {
-        string Name { get; set; }
-
-        string Rank { get; set; }
-
-        bool WillVilainWin(int enemyRank, string enemyName);
-
-        void PrintWhoWins();
- 
-    }
-
-    class Heojus : IHero
-    {
-        public string HeroName { get; set; }
+        public string HeroName { get;  }
         public int HeroRank { get; set; }
 
         public bool WillHeroWin(int enemyRank, string enemyName)
@@ -62,7 +57,6 @@ namespace _20200629_Superpowers
     }
     class Program
     {
-        static void Main(string[] args)
         {
         }
     }
